@@ -10,9 +10,13 @@ import * as bulmaToast from 'bulma-toast'
 })
 export class FormularioLoginComponent implements OnInit {
   // El modelo ligado al formulario, por defecto vacío
-  loginModel = new Login(null, null);
+  // loginModel = new Login(null, null);
+  loginModel:any = {
+    email:null,
+    password:null
+  }
 
-  adjuntosJson:any = []
+  // adjuntosJson:any = []
 
   //Config
   private apiURL = "https://reqres.in/api/register";
@@ -50,7 +54,15 @@ export class FormularioLoginComponent implements OnInit {
 
   formularioEnviado(){
     // this.enviarEmpresa(this.mascotaModel)
-    this.enviarEmpresa(this.loginModel)
+    if(this.verificarCampos()){
+      this.enviarEmpresa(this.loginModel)
+    }else{
+      bulmaToast.toast({
+        message: `Complete todos los campos`,
+        type: 'is-warning',
+        position:'bottom-center',
+      })
+    }
   }
 
   enviarEmpresa(objJson:any) {
@@ -73,5 +85,15 @@ export class FormularioLoginComponent implements OnInit {
             console.error('There was an error!', error);
         }
     })
+  }
+
+  verificarCampos(){
+    let valor = true
+    for (let key in this.loginModel){
+      if(this.loginModel[key]==null || this.loginModel[key]==""){
+        valor = false
+      }
+    }
+    return valor
   }
 }

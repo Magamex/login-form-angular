@@ -12,12 +12,12 @@
           </div>
           <div class="field">
             <label class="label">Correo Electronico</label>
-        	  <input class="input" type="text" name="email" placeholder="ejemplo@gmail.com" [(ngModel)]="loginModel.email">
+        	  <input class="input" type="text" name="email" placeholder="ejemplo@gmail.com" [(ngModel)]="loginModel.email" required>
           </div>
 
           <div class="field">
             <label class="label">Contraseña</label>
-        	  <input class="input" type="password" name="password" placeholder="Contraseña" [(ngModel)]="loginModel.password">
+        	  <input class="input" type="password" name="password" placeholder="Contraseña" [(ngModel)]="loginModel.password" required>
           </div>
 
         	<!-- <input type="number" name="edad" placeholder="Edad de mascota" [(ngModel)]="mascotaModel.edad"> -->
@@ -26,11 +26,11 @@
 
           <div class="has-text-centered">
             <div class="block">
-        	    <button class="button is-warning" type="submit">Registrarse</button>
+        	    <button class="button is-warning " type="submit">Registrarse</button>
             </div>
             <div>
               <div class="block has-text-info">eve.holt@reqres.in para devolver registro ok</div>
-              <div class="block has-text-success">Desarrollado con angular y reqres.in</div>
+              <div class="block button is-ghost"><a target="_blank" href="https://www.taringa.net/22matutex22">Desarrollado con angular y reqres.in</a></div>
             </div>
           </div>
         </form>
