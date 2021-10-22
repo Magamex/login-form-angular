@@ -1,0 +1,43 @@
+<section class="hero is-black is-fullheight">
+<div class="hero-body">
+  <div class="container">
+    <div class="columns is-centered ">
+      <div class="column is-half">
+        <form class="box" #formularioLogin="ngForm" (ngSubmit)="formularioEnviado()">
+          <div class="has-text-centered">
+            <h1 class="title has-text-black">Registro</h1>
+          </div>
+          <div class="field">
+            <label class="label">Correo Electronico</label>
+        	  <input class="input" type="text" name="email" placeholder="ejemplo@gmail.com" [(ngModel)]="loginModel.email">
+          </div>
+
+          <div class="field">
+            <label class="label">Contraseña</label>
+        	  <input class="input" type="password" name="password" placeholder="Contraseña" [(ngModel)]="loginModel.password">
+          </div>
+
+        	<!-- <input type="number" name="edad" placeholder="Edad de mascota" [(ngModel)]="mascotaModel.edad"> -->
+
+          <!-- <input type="file" name="adjunto" (change)="adjuntosToJson($event)" multiple> -->
+
+          <div class="has-text-centered">
+            <div class="block">
+        	    <button class="button is-primary" type="submit">Registrarse</button>
+            </div>
+            <div>
+              <div class="block has-text-info">eve.holt@reqres.in para devolver registro ok</div>
+              <div class="block has-text-success">Desarrollado con angular y reqres.in</div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- <h2>Depurando:</h2>
+{{ loginModel | json }} -->
+
+</section>

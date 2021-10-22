@@ -4,14 +4,13 @@ import { FormsModule } from "@angular/forms";
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { FormularioMascotaComponent } from './formulario-mascota/formulario-mascota.component';
 import { AppComponent } from './app.component';
-
+import { FormularioLoginComponent } from './formulario-login/formulario-login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormularioMascotaComponent
+    FormularioLoginComponent
   ],
   imports: [
     BrowserModule,
